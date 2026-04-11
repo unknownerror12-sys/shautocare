@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="S.H. Autocare Pvt. Ltd. - Authorized Ford Service Center in Bharatpur, Chitwan, Nepal. Vehicle repair, dent & paint, spare parts, and Ford specialist services.">
+    <meta name="google-site-verification" content="PMkdwD4GUz4LumVjQJ8llwON87gIYEhLUFgaRkavabg" />
+    <link rel="canonical" href="https://shautocare.works/" />
     <title>S.H. Autocare Pvt. Ltd. | Authorized Ford Service Center - Bharatpur, Chitwan</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23003478'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='14' fill='white'>SH</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,11 +73,13 @@
         .hamburger span{width:22px;height:2px;background:var(--black);transition:var(--transition);border-radius:2px}
 
         /* ===== HERO ===== */
-        .hero{position:relative;overflow:hidden;min-height:85vh;display:flex;align-items:stretch}
-        .hero-bg{position:absolute;inset:0;z-index:1}
-        .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center}
-        .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.1) 40%,rgba(255,255,255,.75) 65%,rgba(255,255,255,.95) 85%)}
-        .hero .container{position:relative;z-index:2;display:flex;align-items:center;justify-content:flex-end;min-height:85vh}
+        .hero{background:#f8fafb;position:relative;overflow:hidden;padding:0}
+        .hero .container{display:grid;grid-template-columns:3fr 2fr;min-height:calc(100vh - 110px);align-items:center;gap:0}
+        .hero-left{position:relative;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}
+        .hero-left::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-55%,-50%);width:520px;height:520px;background:linear-gradient(135deg,var(--accent-green),#16a34a);border-radius:30px;rotate:12deg;z-index:1;opacity:.85}
+        .hero-left::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-45%,-55%);width:440px;height:440px;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:24px;rotate:-6deg;z-index:0;opacity:.5}
+        .hero-left img{position:relative;z-index:2;width:100%;max-width:680px;height:auto;object-fit:contain;filter:drop-shadow(0 25px 50px rgba(0,0,0,.3)) drop-shadow(0 0 80px rgba(0,52,120,.15))}
+        .hero-right{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px 16px 40px 20px}
         .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:8px;font-weight:600;font-size:.9rem;transition:var(--transition);cursor:pointer;border:none;font-family:var(--font)}
         .btn-dark{background:var(--black);color:var(--white)}
         .btn-dark:hover{background:var(--grey-800);transform:translateY(-2px)}
@@ -85,22 +89,22 @@
         .btn-primary:hover{background:var(--accent);transform:translateY(-2px)}
 
         /* Hero Form Card */
-        .hero-form-card{background:var(--white);border-radius:14px;box-shadow:0 10px 40px rgba(0,0,0,.12);padding:36px 30px;width:400px;max-width:100%;position:relative;z-index:10}
-        .hero-form-card h3{font-size:1.3rem;font-weight:700;color:var(--black);text-align:center;margin-bottom:4px;line-height:1.3}
-        .hero-form-card .form-sub{font-size:.82rem;color:var(--grey-500);text-align:center;margin-bottom:20px}
+        .hero-form-card{background:var(--white);border-radius:14px;box-shadow:0 8px 40px rgba(0,0,0,.08);padding:32px 24px;width:100%;max-width:360px;position:relative}
+        .hero-form-card h3{font-size:1.15rem;font-weight:700;color:var(--black);text-align:center;margin-bottom:4px;line-height:1.3}
+        .hero-form-card .form-sub{font-size:.78rem;color:var(--grey-500);text-align:center;margin-bottom:16px}
         .hero-form-card .form-sub span{color:var(--accent-green);font-weight:600}
-        .form-group{margin-bottom:14px}
-        .form-group select,.form-group input{width:100%;padding:12px 14px;border:1px solid var(--grey-200);border-radius:8px;font-family:var(--font);font-size:.88rem;color:var(--grey-700);background:var(--grey-50);transition:var(--transition);-webkit-appearance:auto;appearance:auto}
+        .form-group{margin-bottom:12px}
+        .form-group select,.form-group input{width:100%;padding:10px 12px;border:1px solid var(--grey-200);border-radius:8px;font-family:var(--font);font-size:.85rem;color:var(--grey-700);background:var(--grey-50);transition:var(--transition);-webkit-appearance:auto;appearance:auto}
         .form-group select:focus,.form-group input:focus{outline:none;border-color:var(--primary);background:var(--white)}
-        .form-submit{width:100%;padding:13px;background:var(--black);color:var(--white);border:none;border-radius:8px;font-family:var(--font);font-size:.92rem;font-weight:600;cursor:pointer;transition:var(--transition)}
-        .form-submit:hover{background:var(--primary)}
-        .form-stats{display:flex;justify-content:center;gap:0;margin-top:20px;border-top:1px solid var(--grey-100);padding-top:16px}
+        .form-submit{width:100%;padding:12px;background:var(--primary);color:var(--white);border:none;border-radius:8px;font-family:var(--font);font-size:.88rem;font-weight:700;cursor:pointer;transition:var(--transition);letter-spacing:.3px}
+        .form-submit:hover{background:var(--accent);transform:translateY(-1px)}
+        .form-stats{display:flex;justify-content:center;gap:0;margin-top:16px;border-top:1px solid var(--grey-100);padding-top:12px}
         .form-stat{flex:1;text-align:center;position:relative}
         .form-stat:first-child{border-right:1px solid var(--grey-200)}
-        .form-stat i{font-size:1.2rem;color:var(--grey-800);display:block;margin-bottom:4px}
-        .form-stat .num{font-size:1.4rem;font-weight:800;color:var(--black)}
-        .form-stat .num sup{font-size:.7rem;font-weight:600}
-        .form-stat .label{font-size:.7rem;color:var(--grey-500);font-weight:500}
+        .form-stat i{font-size:1rem;color:var(--grey-800);display:block;margin-bottom:3px}
+        .form-stat .num{font-size:1.2rem;font-weight:800;color:var(--black)}
+        .form-stat .num sup{font-size:.65rem;font-weight:600}
+        .form-stat .label{font-size:.65rem;color:var(--grey-500);font-weight:500}
 
         /* ===== SECTION COMMON ===== */
         .section{padding:80px 0}
@@ -119,6 +123,7 @@
         .service-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);border-color:var(--primary)}
         .service-card .svc-icon{width:64px;height:64px;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:2rem;color:var(--grey-800)}
         .service-card h4{font-size:.82rem;font-weight:600;color:var(--grey-800);line-height:1.4}
+        .service-card p{font-size:.74rem;color:var(--grey-500);line-height:1.5;margin-top:6px}
 
         /* ===== STATS ===== */
         .stats-section{background:var(--grey-50);padding-bottom:80px}
@@ -147,12 +152,16 @@
         .process-card p{font-size:.82rem;color:var(--grey-500);line-height:1.6}
 
         /* ===== TEAM ===== */
-        .team-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
-        .team-card{text-align:center;background:var(--white);border:1px solid var(--grey-100);border-radius:var(--radius);padding:32px 16px;transition:var(--transition)}
-        .team-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px)}
-        .team-icon{width:80px;height:80px;border-radius:50%;margin:0 auto 16px;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.5rem}
-        .team-card h4{font-size:.95rem;font-weight:600;color:var(--black);margin-bottom:4px}
-        .team-card .role{font-size:.75rem;color:var(--primary);font-weight:500;text-transform:uppercase;letter-spacing:1px}
+        .team-section-wrap{background:var(--white);padding:80px 0;position:relative}
+        .team-section-wrap .section-title{color:var(--black)}
+        .team-section-wrap .section-subtitle{color:var(--grey-500)}
+        .team-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px;position:relative;z-index:1}
+        .team-card{text-align:center;background:var(--white);border:1px solid var(--grey-200);border-radius:16px;padding:36px 20px 28px;transition:var(--transition);position:relative;overflow:hidden}
+        .team-card::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:50px;height:3px;background:var(--primary);border-radius:0 0 4px 4px}
+        .team-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-6px);border-color:var(--primary)}
+        .team-icon{width:90px;height:90px;border-radius:50%;margin:0 auto 18px;background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%);display:flex;align-items:center;justify-content:center;color:var(--white);font-size:1.15rem;font-weight:700;letter-spacing:1px;border:3px solid var(--grey-100);box-shadow:0 4px 20px rgba(0,52,120,.15)}
+        .team-card h4{font-size:1.05rem;font-weight:800;color:var(--black);margin-bottom:6px}
+        .team-card .role{display:inline-block;font-size:.72rem;color:var(--primary);font-weight:600;text-transform:uppercase;letter-spacing:1.5px;background:rgba(0,52,120,.06);padding:5px 16px;border-radius:50px;border:1px solid rgba(0,52,120,.1)}
 
         /* ===== REVIEWS ===== */
         .reviews{background:var(--grey-50)}
@@ -254,9 +263,13 @@
 
         /* ===== RESPONSIVE ===== */
         @media(max-width:1024px){
-            .hero{min-height:70vh}
-            .hero .container{min-height:70vh;justify-content:center}
-            .hero-form-card{width:380px}
+            .hero .container{grid-template-columns:1fr;min-height:auto}
+            .hero-left{height:400px;padding:30px}
+            .hero-left::before{width:300px;height:300px}
+            .hero-left::after{width:250px;height:250px}
+            .hero-left img{max-width:380px}
+            .hero-right{padding:30px 20px 40px;align-items:center}
+            .hero-form-card{max-width:420px}
             .services-grid{grid-template-columns:repeat(3,1fr)}
             .stats-bar{grid-template-columns:repeat(2,1fr)}
             .why-section .why-grid{grid-template-columns:1fr}
@@ -275,9 +288,12 @@
             .footer-grid{grid-template-columns:1fr}
             .footer-bottom{flex-direction:column;gap:8px;text-align:center}
             .section{padding:60px 0}
-            .hero{min-height:60vh}
-            .hero .container{min-height:60vh}
-            .hero-form-card{width:100%;max-width:380px}
+            .hero-left{height:320px;padding:20px}
+            .hero-left::before{width:240px;height:240px}
+            .hero-left::after{width:200px;height:200px}
+            .hero-left img{max-width:300px}
+            .hero-right{padding:20px 16px 30px}
+            .hero-form-card{width:100%;max-width:400px}
             .why-features{grid-template-columns:1fr}
             .process-grid{grid-template-columns:1fr 1fr}
             .side-tab{display:none}
@@ -290,6 +306,48 @@
             .process-grid{grid-template-columns:1fr}
         }
     </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutoRepair",
+        "name": "S.H. Autocare Pvt. Ltd.",
+        "alternateName": "SH Autocare",
+        "url": "https://shautocare.works",
+        "telephone": "+977-9744858660",
+        "email": "shautocarepvt@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Milan Chowk",
+            "addressLocality": "Bharatpur",
+            "addressRegion": "Chitwan",
+            "postalCode": "44200",
+            "addressCountry": "NP"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 27.6693269,
+            "longitude": 84.4449835
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday"],
+                "opens": "09:00",
+                "closes": "17:00"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "150",
+            "bestRating": "5"
+        },
+        "description": "Authorized Ford Service Center in Bharatpur, Chitwan, Nepal. Vehicle repair, dent & paint, spare parts, engine diagnostics, and Ford specialist services.",
+        "priceRange": "$$",
+        "image": "https://shautocare.works/homepage.png",
+        "sameAs": []
+    }
+    </script>
 </head>
 <body>
     <!-- Top Bar -->
@@ -322,7 +380,7 @@
                 <a href="#home" class="active">Home</a>
                 <a href="#about">About Us</a>
                 <a href="#services">Our Services</a>
-                <a href="#team">Team</a>
+                <a href="#team">Our Team</a>
                 <a href="#reviews">Reviews</a>
                 <a href="#contact" class="nav-cta">Contact Us</a>
             </div>
@@ -334,10 +392,11 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-bg">
-            <img src="homepage.png" alt="S.H. Autocare - Car Repair Service">
-        </div>
         <div class="container">
+            <div class="hero-left">
+                <img src="homepage.png" alt="S.H. Autocare - Car Repair Service">
+            </div>
+            <div class="hero-right">
                 <div class="hero-form-card">
                     <h3>Need Vehicle Service<br>in Bharatpur?</h3>
                     <p class="form-sub">Fill in the form &amp; receive an <span>instant quote</span>.</p>
@@ -371,6 +430,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
     </section>
 
@@ -381,7 +441,7 @@
                 <h2 class="section-title">Reliable Vehicle Service in Bharatpur</h2>
             </div>
             <div class="about-text fade-up">
-                <p>S.H. Autocare imports and sells parts and accessories of vehicles. It also deals with vehicle repair, service, dent and paint.</p>
+                <p>S.H. Autocare imports and sells parts and accessories of vehicles. It also deals with vehicle repair, service, dent and paint. Located at Milan Chowk, Bharatpur-12, Chitwan, we are your trusted one-stop automotive solution — from Ford specialized servicing to engine diagnostics and routine maintenance. The company operates under <strong>Sedhai Holdings</strong>, serving the Chitwan automotive industry since 2012.</p>
             </div>
         </div>
     </section>
@@ -397,22 +457,27 @@
                 <div class="service-card">
                     <div class="svc-icon"><i class="fas fa-car-crash"></i></div>
                     <h4>Vehicle Repair &amp; Maintenance</h4>
+                    <p>Complete mechanical repair and preventive maintenance for all vehicle types.</p>
                 </div>
                 <div class="service-card">
                     <div class="svc-icon"><i class="fas fa-car"></i></div>
                     <h4>Ford Specialized Servicing</h4>
+                    <p>Factory-authorized servicing for all Ford models with genuine OEM parts.</p>
                 </div>
                 <div class="service-card">
                     <div class="svc-icon"><i class="fas fa-spray-can"></i></div>
                     <h4>Dent &amp; Paint Services</h4>
+                    <p>Professional body repair, dent removal, and premium paint restoration.</p>
                 </div>
                 <div class="service-card">
                     <div class="svc-icon"><i class="fas fa-cogs"></i></div>
                     <h4>Spare Parts &amp; Accessories Sales</h4>
+                    <p>Genuine spare parts and quality accessories for Ford and other brands.</p>
                 </div>
                 <div class="service-card">
                     <div class="svc-icon"><i class="fas fa-microchip"></i></div>
                     <h4>Engine Diagnostics &amp; Routine Servicing</h4>
+                    <p>Advanced computerized diagnostics and scheduled servicing packages.</p>
                 </div>
             </div>
         </div>
@@ -513,41 +578,41 @@
     </section>
 
     <!-- Team Section -->
-    <section class="section" id="team">
+    <div class="team-section-wrap" id="team">
         <div class="container">
             <div class="section-header fade-up">
-                <h2 class="section-title">Our Team</h2>
+                <h2 class="section-title">Management Team</h2>
                 <p class="section-subtitle">Dedicated professionals committed to keeping your vehicle in perfect condition.</p>
             </div>
             <div class="team-grid fade-up">
                 <div class="team-card">
-                    <div class="team-icon"><i class="fas fa-user-tie"></i></div>
-                    <h4>Nirdesh Shedhain</h4>
+                    <div class="team-icon">NS</div>
+                    <h4>Mr. Nirdesh Shedhain</h4>
                     <p class="role">Director</p>
                 </div>
                 <div class="team-card">
-                    <div class="team-icon"><i class="fas fa-user-tie"></i></div>
-                    <h4>Safal Raj Joshi</h4>
+                    <div class="team-icon">SJ</div>
+                    <h4>Mr. Safal Raj Joshi</h4>
                     <p class="role">Manager</p>
                 </div>
                 <div class="team-card">
-                    <div class="team-icon"><i class="fas fa-user-tie"></i></div>
-                    <h4>Ram Yadav</h4>
+                    <div class="team-icon">NS</div>
+                    <h4>Mr. Naresh Sharma</h4>
+                    <p class="role">Accountant</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-icon">RY</div>
+                    <h4>Mr. Ram Yadav</h4>
                     <p class="role">Sales &amp; Marketing Officer</p>
                 </div>
                 <div class="team-card">
-                    <div class="team-icon"><i class="fas fa-user-tie"></i></div>
-                    <h4>Shishir Kandel</h4>
+                    <div class="team-icon">SK</div>
+                    <h4>Mr. Shishir Kandel</h4>
                     <p class="role">Junior Sales &amp; Marketing</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-icon"><i class="fas fa-user-tie"></i></div>
-                    <h4>Naresh Sharma</h4>
-                    <p class="role">Accountant</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Reviews Section -->
     <section class="section reviews" id="reviews">
@@ -597,7 +662,7 @@
                 </div>
             </div>
             <div class="reviews-footer fade-up">
-                <p><strong>SH Autocare Pvt. Ltd.</strong> &nbsp;&middot;&nbsp; Google Reviews &nbsp;|&nbsp; <a href="https://maps.app.goo.gl/PpUViYRdYs55hytB6" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;">Leave a Review</a></p>
+                <p><strong>SH Autocare Pvt. Ltd.</strong> &nbsp;&middot;&nbsp; Google Reviews &nbsp;|&nbsp; <a href="https://maps.app.goo.gl/KdS8jc2NFhe7epao7" target="_blank" rel="noopener noreferrer" style="color:var(--primary);font-weight:600;">Leave a Review</a></p>
             </div>
         </div>
     </section>
@@ -674,7 +739,7 @@
                         </div>
                     </div>
                     <div class="contact-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.1!2d84.43!3d27.68!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDQwJzQ4LjAiTiA4NMKwMjUnNDguMCJF!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="S.H. Autocare Location"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1766.5!2d84.4424086!3d27.6693316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3994e5004ae84d89%3A0xbacdf7fb9e02eda9!2sS.H.%20Autocare%20Pvt.%20Ltd.!5e0!3m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="S.H. Autocare Location"></iframe>
                     </div>
                 </div>
             </div>
@@ -718,7 +783,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="f-name">SH <span>Autocare</span></div>
-                    <p>S.H. Autocare Pvt. Ltd. is your trusted vehicle service and repair center in Bharatpur. We offer a wide range of services for all vehicle types. Visit our workshop and let our expert technicians take care of the rest.</p>
+                    <p>S.H. Autocare Pvt. Ltd. is your trusted vehicle service and repair center in Bharatpur. We offer a wide range of services for all vehicle types. The company operates under <strong>Sedhai Holdings</strong>. Visit our workshop and let our expert technicians take care of the rest.</p>
                     <div class="footer-social">
                         <a href="https://wa.me/message/AO3PL22NMQU3O1" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         <a href="tel:+9779744858660" title="Call"><i class="fas fa-phone-alt"></i></a>
@@ -752,7 +817,7 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 <a href="#">SH Autocare Pvt. Ltd.</a> All Rights Reserved. A unit of Sedhai Holdings.</p>
-                <p><a href="https://maps.app.goo.gl/PpUViYRdYs55hytB6" target="_blank" rel="noopener noreferrer">shautocare.works</a></p>
+                <p><a href="https://maps.app.goo.gl/KdS8jc2NFhe7epao7" target="_blank" rel="noopener noreferrer">shautocare.works</a></p>
             </div>
         </div>
     </footer>
