@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="S.H. Autocare Pvt. Ltd. - Authorized Ford Service Center in Bharatpur, Chitwan, Nepal. Vehicle repair, dent & paint, spare parts, and Ford specialist services.">
+    <meta name="description" content="S.H. Autocare Pvt. Ltd. — Authorized Ford service center in Bharatpur, Chitwan, Nepal. Expert car repair, vehicle maintenance, dent & paint, genuine spare parts, and engine diagnostics. Trusted auto workshop since 2012.">
     <meta name="google-site-verification" content="PMkdwD4GUz4LumVjQJ8llwON87gIYEhLUFgaRkavabg" />
     <link rel="canonical" href="https://shautocare.works/" />
-    <title>S.H. Autocare Pvt. Ltd. | Authorized Ford Service Center - Bharatpur, Chitwan</title>
+    <title>S.H. Autocare Pvt. Ltd. | Authorized Ford Service Center — Car Repair in Bharatpur, Chitwan</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23003478'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial,sans-serif' font-weight='800' font-size='14' fill='white'>SH</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,10 +74,11 @@
 
         /* ===== HERO ===== */
         .hero{background:#f8fafb;position:relative;overflow:hidden;padding:0}
-        .hero .container{display:grid;grid-template-columns:3fr 2fr;min-height:calc(100vh - 110px);align-items:center;gap:0}
+        .hero::before{content:'';position:absolute;inset:0;opacity:.03;z-index:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23003478' stroke-width='1'%3E%3Cpath d='M30 8v10M25 13h10'/%3E%3Ccircle cx='14' cy='40' r='6'/%3E%3Ccircle cx='14' cy='40' r='3'/%3E%3Cpath d='M44 35l8 8M44 43l8-8'/%3E%3C/g%3E%3C/svg%3E");background-size:60px 60px}
+        .hero .container{display:grid;grid-template-columns:3fr 2fr;min-height:calc(100vh - 110px);align-items:center;gap:0;position:relative;z-index:1}
         .hero-left{position:relative;height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden}
-        .hero-left::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-55%,-50%);width:520px;height:520px;background:linear-gradient(135deg,var(--accent-green),#16a34a);border-radius:30px;rotate:12deg;z-index:1;opacity:.85}
-        .hero-left::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-45%,-55%);width:440px;height:440px;background:linear-gradient(135deg,var(--primary),var(--accent));border-radius:24px;rotate:-6deg;z-index:0;opacity:.5}
+        .hero-left::before{content:'';position:absolute;top:50%;left:48%;transform:translate(-50%,-48%);width:520px;height:520px;background:linear-gradient(150deg,var(--accent-green) 0%,#16a34a 100%);clip-path:polygon(8% 0%,100% 0%,92% 100%,0% 100%);z-index:1;opacity:.82}
+        .hero-left::after{content:'';position:absolute;top:50%;left:52%;transform:translate(-50%,-52%);width:440px;height:440px;background:linear-gradient(150deg,var(--primary) 0%,var(--accent) 100%);clip-path:polygon(0% 0%,92% 0%,100% 100%,8% 100%);z-index:0;opacity:.45}
         .hero-left img{position:relative;z-index:2;width:100%;max-width:680px;height:auto;object-fit:contain;filter:drop-shadow(0 25px 50px rgba(0,0,0,.3)) drop-shadow(0 0 80px rgba(0,52,120,.15))}
         .hero-right{display:flex;flex-direction:column;justify-content:center;align-items:center;padding:40px 16px 40px 20px}
         .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:8px;font-weight:600;font-size:.9rem;transition:var(--transition);cursor:pointer;border:none;font-family:var(--font)}
@@ -89,7 +90,7 @@
         .btn-primary:hover{background:var(--accent);transform:translateY(-2px)}
 
         /* Hero Form Card */
-        .hero-form-card{background:var(--white);border-radius:14px;box-shadow:0 8px 40px rgba(0,0,0,.08);padding:32px 24px;width:100%;max-width:360px;position:relative}
+        .hero-form-card{background:var(--white);border-radius:14px;box-shadow:0 8px 40px rgba(0,0,0,.08);border:1px solid var(--grey-200);padding:32px 24px;width:100%;max-width:360px;position:relative}
         .hero-form-card h3{font-size:1.15rem;font-weight:700;color:var(--black);text-align:center;margin-bottom:4px;line-height:1.3}
         .hero-form-card .form-sub{font-size:.78rem;color:var(--grey-500);text-align:center;margin-bottom:16px}
         .hero-form-card .form-sub span{color:var(--accent-green);font-weight:600}
@@ -265,11 +266,11 @@
         @media(max-width:1024px){
             .hero .container{grid-template-columns:1fr;min-height:auto}
             .hero-left{height:400px;padding:30px}
-            .hero-left::before{width:300px;height:300px}
-            .hero-left::after{width:250px;height:250px}
-            .hero-left img{max-width:380px}
+            .hero-left::before{width:340px;height:340px;clip-path:polygon(8% 0%,100% 0%,92% 100%,0% 100%)}
+            .hero-left::after{width:280px;height:280px;clip-path:polygon(0% 0%,92% 0%,100% 100%,8% 100%)}
+            .hero-left img{max-width:440px}
             .hero-right{padding:30px 20px 40px;align-items:center}
-            .hero-form-card{max-width:420px}
+            .hero-form-card{max-width:380px}
             .services-grid{grid-template-columns:repeat(3,1fr)}
             .stats-bar{grid-template-columns:repeat(2,1fr)}
             .why-section .why-grid{grid-template-columns:1fr}
@@ -289,11 +290,11 @@
             .footer-bottom{flex-direction:column;gap:8px;text-align:center}
             .section{padding:60px 0}
             .hero-left{height:320px;padding:20px}
-            .hero-left::before{width:240px;height:240px}
-            .hero-left::after{width:200px;height:200px}
-            .hero-left img{max-width:300px}
+            .hero-left::before{width:260px;height:260px;clip-path:polygon(8% 0%,100% 0%,92% 100%,0% 100%)}
+            .hero-left::after{width:220px;height:220px;clip-path:polygon(0% 0%,92% 0%,100% 100%,8% 100%)}
+            .hero-left img{max-width:340px}
             .hero-right{padding:20px 16px 30px}
-            .hero-form-card{width:100%;max-width:400px}
+            .hero-form-card{width:100%;max-width:360px}
             .why-features{grid-template-columns:1fr}
             .process-grid{grid-template-columns:1fr 1fr}
             .side-tab{display:none}
@@ -403,13 +404,18 @@
                     <div class="form-group">
                         <select id="carModel">
                             <option value="" disabled selected>Select Ford Model</option>
-                            <option>Ford EcoSport</option>
-                            <option>Ford Endeavour</option>
-                            <option>Ford Figo</option>
-                            <option>Ford Aspire</option>
-                            <option>Ford Freestyle</option>
-                            <option>Ford Ranger</option>
-                            <option>Ford Everest</option>
+                            <optgroup label="SUVs">
+                                <option>Next-Gen Ford Everest</option>
+                                <option>Ford Everest</option>
+                            </optgroup>
+                            <optgroup label="Pickups">
+                                <option>Ford Ranger</option>
+                                <option>Next-Gen Ford Ranger</option>
+                                <option>Ford Ranger Raptor</option>
+                            </optgroup>
+                            <optgroup label="Special Vehicle">
+                                <option>4WD SUV Ambulance</option>
+                            </optgroup>
                             <option>Other Vehicle</option>
                         </select>
                     </div>
@@ -438,10 +444,10 @@
     <section class="section" id="about">
         <div class="container">
             <div class="section-header fade-up">
-                <h2 class="section-title">Reliable Vehicle Service in Bharatpur</h2>
+                <h2 class="section-title">Trusted Vehicle Service Center in Bharatpur</h2>
             </div>
             <div class="about-text fade-up">
-                <p>S.H. Autocare imports and sells parts and accessories of vehicles. It also deals with vehicle repair, service, dent and paint. Located at Milan Chowk, Bharatpur-12, Chitwan, we are your trusted one-stop automotive solution — from Ford specialized servicing to engine diagnostics and routine maintenance. The company operates under <strong>Sedhai Holdings</strong>, serving the Chitwan automotive industry since 2012.</p>
+                <p>S.H. Autocare Pvt. Ltd. is an authorized Ford service center and full-service auto workshop located at Milan Chowk, Bharatpur-12, Chitwan. We specialize in vehicle repair, maintenance, dent and paint, spare parts supply, and engine diagnostics. With over 13 years of experience and 5,000+ satisfied customers, we are Bharatpur's most trusted name in automotive care. The company operates under <strong>Sedhai Holdings</strong>.</p>
             </div>
         </div>
     </section>
@@ -451,7 +457,7 @@
         <div class="container">
             <div class="section-header fade-up">
                 <h2 class="section-title">Our Services</h2>
-                <p class="section-subtitle">Complete automotive solutions for all your vehicle needs</p>
+                <p class="section-subtitle">Professional automotive care — from routine servicing to major repairs</p>
             </div>
             <div class="services-grid fade-up">
                 <div class="service-card">
@@ -519,7 +525,7 @@
                 </div>
                 <div class="why-content fade-up">
                     <h2>Why SH Autocare?</h2>
-                    <p class="why-sub">Finding a trusted, transparent, and reliable vehicle mechanic in Bharatpur shouldn't be stressful. S.H. Autocare is your one-stop destination for everything related to vehicle servicing and repair. We combine professional expertise with convenience.</p>
+                    <p class="why-sub">Finding a reliable and transparent auto workshop in Bharatpur shouldn't be stressful. At S.H. Autocare, we combine professional expertise, genuine parts, and honest pricing to deliver service you can trust — every time.</p>
                     <div class="why-features">
                         <div class="why-feat"><i class="fas fa-check-circle"></i> Experienced Technicians</div>
                         <div class="why-feat"><i class="fas fa-check-circle"></i> Genuine Spare Parts</div>
@@ -683,13 +689,13 @@
     <section class="section contact" id="contact">
         <div class="container">
             <div class="section-header fade-up">
-                <h2 class="section-title">Vehicle Care in Bharatpur</h2>
-                <p class="section-subtitle">Looking for a professional, trusted, and experienced auto workshop in Bharatpur? You've come to the right place.</p>
+                <h2 class="section-title">Get in Touch With Us</h2>
+                <p class="section-subtitle">Need professional car repair or vehicle maintenance in Bharatpur? Contact our expert team today.</p>
             </div>
             <div class="contact-grid">
                 <div class="contact-form-wrap fade-up">
                     <h3>Get in Touch</h3>
-                    <p>Need reliable repair or maintenance? Our experienced technicians are ready to help.</p>
+                    <p>Need reliable car repair or maintenance? Fill out the form and our team will get back to you promptly.</p>
                     <form class="contact-form" onsubmit="submitContactForm(event)">
                         <input type="text" placeholder="Full Name *" required>
                         <input type="email" placeholder="Email Address">
