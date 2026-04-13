@@ -773,15 +773,37 @@
             window.open('https://wa.me/9779744858660?text='+msg,'_blank');
         }
 
-        // Contact form - sends to WhatsApp
+        // Contact form - opens the user's default email app
         function submitContactForm(e){
             e.preventDefault();
-            var inputs=e.target.querySelectorAll('input,textarea');
-            var parts=[];
-            inputs.forEach(function(i){if(i.value)parts.push(i.value)});
-            var msg=encodeURIComponent('New inquiry from SH Autocare website:\n'+parts.join('\n'));
-            window.open('https://wa.me/9779744858660?text='+msg,'_blank');
-            e.target.reset();
+            var form=e.target;
+            var inputs=form.querySelectorAll('input,textarea');
+            var values=[];
+
+            inputs.forEach(function(input){
+                values.push(input.value.trim());
+            });
+
+            var fullName=values[0];
+            var email=values[1];
+            var phone=values[2];
+            var subject=values[3] || 'New inquiry from SH Autocare website';
+            var message=values[4];
+
+            var bodyLines=[
+                'Full Name: ' + fullName,
+                'Email Address: ' + (email || 'Not provided'),
+                'Phone Number: ' + phone
+            ];
+
+            if(message){
+                bodyLines.push('');
+                bodyLines.push('Message:');
+                bodyLines.push(message);
+            }
+
+            window.location.href='mailto:shautocarepvt@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(bodyLines.join('\n'));
+            form.reset();
         }
 
         // Scroll animations
