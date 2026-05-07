@@ -286,7 +286,6 @@
         "name": "S.H. Autocare Pvt. Ltd.",
         "alternateName": "SH Autocare",
         "url": "https://shautocare.works",
-        "telephone": "+977-9744858660",
         "email": "shautocarepvt@gmail.com",
         "address": {
             "@type": "PostalAddress",
@@ -331,7 +330,6 @@
                 <span><i class="fas fa-clock"></i> Sun – Fri: 9AM – 5PM</span>
             </div>
             <div class="topbar-right">
-                <a href="https://wa.me/message/AO3PL22NMQU3O1" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 <a href="mailto:shautocarepvt@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
@@ -369,7 +367,7 @@
             <div class="hero-right">
                 <div class="hero-form-card">
                     <h3>Need Vehicle Service<br>in Bharatpur?</h3>
-                    <p class="form-sub">Fill in the form &amp; receive an <span>instant quote</span>.</p>
+                    <p class="form-sub">Send us an email &amp; we'll reply <span>as soon as possible</span>.</p>
                     <div class="form-group">
                         <select id="carModel">
                             <option value="" disabled selected>Select Vehicle Type</option>
@@ -379,9 +377,10 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <input type="tel" placeholder="Your Phone *" maxlength="15" id="heroPhone">
+                        <input type="text" placeholder="Your Name *" id="heroName">
                     </div>
                     <button class="form-submit" onclick="submitHeroForm()">Get a Free Estimate</button>
+                    <p style="font-size:.72rem;color:var(--grey-400);text-align:center;margin-top:10px;">For other inquiries, please visit our office.</p>
                     <div class="form-stats">
                         <div class="form-stat">
                             <i class="fas fa-users"></i>
@@ -635,10 +634,11 @@
                         </div>
                     </div>
                     <div class="contact-detail">
-                        <div class="cd-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="cd-icon"><i class="fas fa-envelope"></i></div>
                         <div>
-                            <h4>WhatsApp</h4>
-                            <p><a href="https://wa.me/message/AO3PL22NMQU3O1" target="_blank" rel="noopener noreferrer">+977 9744858660</a></p>
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:shautocarepvt@gmail.com">shautocarepvt@gmail.com</a></p>
+                            <p style="font-size:.75rem;color:var(--grey-400);margin-top:3px;">We reply as soon as possible. For other inquiries, visit our office.</p>
                         </div>
                     </div>
                     <div class="contact-detail">
@@ -688,7 +688,7 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-q" onclick="toggleFaq(this)">How can I get a service estimate? <i class="fas fa-chevron-down"></i></div>
-                    <div class="faq-a"><div class="faq-a-inner">You can fill out the form on our homepage or contact us directly via phone or WhatsApp. We provide free vehicle inspection and transparent cost estimates before any work begins.</div></div>
+                    <div class="faq-a"><div class="faq-a-inner">You can fill out the form on our homepage or send us an email at shautocarepvt@gmail.com. We reply as soon as possible. For other inquiries, please visit our office at Milan Chowk, Bharatpur-12, Chitwan.</div></div>
                 </div>
             </div>
         </div>
@@ -702,7 +702,6 @@
                     <div class="f-name">SH <span>Autocare</span></div>
                     <p>S.H. Autocare Pvt. Ltd. is your trusted vehicle service and repair center in Bharatpur. We offer a wide range of services for all vehicle types. The company operates under <strong>Sedhai Holdings</strong>. Visit our workshop and let our expert technicians take care of the rest.</p>
                     <div class="footer-social">
-                        <a href="https://wa.me/message/AO3PL22NMQU3O1" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                         <a href="mailto:shautocarepvt@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
@@ -718,7 +717,6 @@
                 <div>
                     <h4>Contact Us</h4>
                     <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> <span>Milan Chowk, Bharatpur-12, Chitwan, Nepal</span></div>
-                    <div class="footer-contact-item"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/message/AO3PL22NMQU3O1" target="_blank" rel="noopener noreferrer">+977 9744858660</a></div>
                     <div class="footer-contact-item"><i class="fas fa-envelope"></i> <a href="mailto:shautocarepvt@gmail.com">shautocarepvt@gmail.com</a></div>
                 </div>
             </div>
@@ -732,9 +730,9 @@
     <!-- Side Tab -->
     <a href="#contact" class="side-tab">GET AN ESTIMATE</a>
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/message/AO3PL22NMQU3O1" target="_blank" rel="noopener noreferrer" class="whatsapp-float" title="Chat on WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <!-- Email Float -->
+    <a href="mailto:shautocarepvt@gmail.com" class="whatsapp-float" title="Email Us" style="background:#003478;animation:none;">
+        <i class="fas fa-envelope"></i>
     </a>
 
     <script>
@@ -753,13 +751,14 @@
             item.classList.toggle('open');
         }
 
-        // Hero form - sends to WhatsApp
+        // Hero form - sends email
         function submitHeroForm(){
-            var model=document.getElementById('carModel').value;
-            var phone=document.getElementById('heroPhone').value;
-            if(!model||!phone){alert('Please select a car model and enter your phone number.');return;}
-            var msg=encodeURIComponent('Hi, I need a service estimate for my '+model+'. My phone: '+phone);
-            window.open('https://wa.me/9779744858660?text='+msg,'_blank');
+            var model = document.getElementById('carModel').value;
+            var name  = document.getElementById('heroName').value;
+            if(!model || !name){alert('Please select a vehicle type and enter your name.');return;}
+            var subject = encodeURIComponent('Free Estimate Request – ' + model);
+            var body    = encodeURIComponent('Hi,\n\nI would like a free estimate for my ' + model + '.\n\nName: ' + name + '\n\nThank you.');
+            window.location.href = 'mailto:shautocarepvt@gmail.com?subject=' + subject + '&body=' + body;
         }
 
         // Contact form - opens email client
